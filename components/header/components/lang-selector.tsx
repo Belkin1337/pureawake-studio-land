@@ -19,7 +19,7 @@ export const LangSelector = () => {
 
 	return (
 		<DropdownMenu modal={false}>
-			<DropdownMenuTrigger id="language-selector">
+			<DropdownMenuTrigger id="language-selector" aria-label="Change website language">
 				<Selected
 					animation="spring"
 					className="flex justify-center items-center p-4 hover:scale-[0.97] hover:duration-500 duration-300 hover:bg-neutral-600/40 rounded-xl cursor-pointer"

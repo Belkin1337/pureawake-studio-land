@@ -1,15 +1,15 @@
 "use client"
 
-import Link from "next/link";
-import Image from "next/image";
 import { HEADER_SEGMENTS } from "@/shared/header";
 import { HeaderSegment } from "@/components/header/components/header-segment";
 import { LangSelector } from "@/components/header/components/lang-selector";
 import { GLOBAL_SITE_HREF } from "@/shared/contacts";
-import LogoTransparent from "@/assets/images/favicon_transparent.png"
 import { useInView } from "react-intersection-observer";
 import { TelegramIcon } from "@/ui/icons/components/telegram-icon";
 import { Selected } from "@/ui/selected";
+import Link from "next/link";
+import Image from "next/image";
+import LogoTransparent from "@/assets/images/favicon_transparent.png"
 
 export const Header = () => {
 	const { ref, inView } = useInView();
@@ -25,7 +25,7 @@ export const Header = () => {
 					from-neutral-200/0 via-neutral-200/30 to-neutral-200/0"
 				/>
 				<div className="flex justify-center lg:justify-start items-center overflow-hidden">
-					<Link id="pureawake-logotype" href={GLOBAL_SITE_HREF}>
+					<Link aria-label="pureawake" id="pureawake-logotype" href={GLOBAL_SITE_HREF}>
 						<div className="flex justify-center items-center gap-x-1 py-2">
 							<Image
 								src={LogoTransparent}
@@ -67,7 +67,7 @@ export const Header = () => {
 							animation="spring"
 							className="flex justify-center items-center p-4 hover:scale-[0.97]	hover:duration-500 duration-300 hover:bg-neutral-600/40 rounded-xl cursor-pointer"
 						>
-							<Link id="telegram-media" href="https://t.me/pureawake">
+							<Link aria-label="telegram" id="telegram-media" href="https://t.me/pureawake">
 								<TelegramIcon height="18" width="18"/>
 							</Link>
 						</Selected>

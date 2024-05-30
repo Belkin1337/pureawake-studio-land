@@ -53,7 +53,7 @@ export const HEADER_SEGMENTS: HeaderSegmentsType[] = [
 	{
 		component: {
 			title: "contacts",
-			href: "/#contacts",
+			href: "/#contact",
 			icon: Contact
 		}
 	},

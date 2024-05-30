@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { cn } from "@/lib/utils/styles";
 import { Variants, motion } from "framer-motion";
@@ -10,7 +10,7 @@ interface WordFadeInProps {
 	variants?: Variants;
 }
 
-export default function WordFadeIn({
+export function WordFadeIn({
 	words,
 	delay = 0.15,
 	variants = {

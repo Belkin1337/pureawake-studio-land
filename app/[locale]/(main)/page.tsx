@@ -1,15 +1,23 @@
-import { Services } from "@/components/sections/components/services";
-import { Pricing } from "@/components/sections/components/pricing";
 import { SectionWrapper } from "@/components/wrappers/components/section-wrapper";
 import { getTranslations } from "next-intl/server";
-import Link from "next/link";
-import { TELEGRAM_CONTACT_PERSON_HREF, TELEGRAM_CONTACT_PERSON_ID } from "@/shared/contacts";
-import Image from "next/image";
-import PNG from "@/assets/images/config/png_png.jpg";
+import {
+	TELEGRAM_CONTACT_PERSON_HREF,
+	TELEGRAM_CONTACT_PERSON_ID
+} from "@/shared/contacts";
 import { Button } from "@/ui/button";
 import { Star } from "lucide-react";
-import RetroGrid from "@/ui/retro-grid";
-import WordFadeIn from "@/ui/word-fade-in";
+import { RetroGrid } from "@/ui/retro-grid";
+import { WordFadeIn } from "@/ui/word-fade-in";
+import Image from "next/image";
+import PNG from "@/assets/images/config/png_png.jpg";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+
+const Pricing = dynamic(() => import('@/components/sections/components/pricing')
+	.then(mod => mod.Pricing))
+
+const Services = dynamic(() => import('@/components/sections/components/services')
+	.then(mod => mod.Services))
 
 export default async function Home() {
 	const servicesT = await getTranslations("Services");
@@ -34,7 +42,7 @@ export default async function Home() {
 						/>
 					</div>
 					<div className="w-full sm:w-fit">
-						<Link href="/#contacts">
+						<Link href='/#contact'>
 							<Button variant="shimmer">
 								<Star size={18} className="fill-white"/>
 								<p className="text-white text-lg font-semibold">
@@ -52,7 +60,7 @@ export default async function Home() {
 			<SectionWrapper id="pricing" title={pricingT('section_title')}>
 				<Pricing/>
 			</SectionWrapper>
-			<SectionWrapper id="contacts" title={contactsT('section_title')}>
+			<SectionWrapper id="contact" title={contactsT('section_title')}>
 				<div className="flex flex-row lg:flex-col gap-y-6">
 					<div className="flex flex-col gap-y-4">
 						<div className="flex flex-col lg:flex-row gap-4 *:bg-neutral-800 *:rounded-3xl *:px-3 *:py-4 *:w-full">
@@ -110,14 +118,10 @@ export default async function Home() {
 									</div>
 									<div
 										className="flex flex-col justify-center gap-y-2 bg-neutral-700 h-full w-full rounded-md p-4 *:leading-3 *:text-white *:font-medium lg:*:text-xl">
-										<p>1.&nbsp;{contactsT('first')}
-										</p>
-										<p>2.&nbsp;{contactsT('second')}
-										</p>
-										<p>3.&nbsp;{contactsT('third')}
-										</p>
-										<p>4.&nbsp;{contactsT('fourth')}
-										</p>
+										<p>1.&nbsp;{contactsT('first')}</p>
+										<p>2.&nbsp;{contactsT('second')}</p>
+										<p>3.&nbsp;{contactsT('third')}</p>
+										<p>4.&nbsp;{contactsT('fourth')}</p>
 									</div>
 								</div>
 							</div>
