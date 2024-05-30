@@ -1,0 +1,39 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+@font-face {
+  font-family: "GothamPro";
+  src: url("../public/fonts/gothampro.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pixy";
+  src: url("../public/fonts/PIXY.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GothamProBold";
+  src: url("../public/fonts/gothampro_bold.ttf") format("truetype");
+}
+
+@layer components {
+  .wrapper {
+    @apply px-[16px] sm:px-[48px] md:px-[96px] lg:px-[126px] xl:px-[196px] 2xl:px-[256px]
+  }
+}
+
+html {
+  font-family: "GothamPro", serif;
+}
+
+body {
+  background-color:hsla(0,0%,3%,1);
+  min-height: 100vh;
+}
+
+::selection {
+  color: black;
+  background-color: #e5fbfe;
+  border-radius: 16px;
+}
