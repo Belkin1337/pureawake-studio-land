@@ -3,7 +3,7 @@ export const Noise = () => {
 		<div
 			className="absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]"
 			style={{
-				backgroundImage: "url('./images/noise.webp')",
+				backgroundImage: "url('/images/noise.webp')",
 				backgroundSize: "30%",
 			}}
 		></div>

@@ -1,12 +1,18 @@
 "use client"
 
-import { CircleChevronDown  } from 'lucide-react';
 import { PORTFOLIO_CASES } from "@/shared/portfolio";
-import { Dialog, DialogContent, DialogTrigger } from "@/ui/dialog";
+import { Dialog, DialogTrigger } from "@/ui/dialog";
 import { WobbleCard } from "@/ui/wobble-card";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/ui/accordion";
+import { Accordion, AccordionItem, AccordionTrigger } from "@/ui/accordion";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+
+const DialogContent = dynamic(() => import("@/ui/dialog")
+	.then(mod => mod.DialogContent))
+
+const AccordionContent = dynamic(() => import("@/ui/accordion")
+	.then(mod => mod.AccordionContent))
 
 export const Portfolio = () => {
 	const portfolioT = useTranslations("Portfolio");
@@ -47,10 +53,10 @@ export const Portfolio = () => {
 							{item.name}
 						</h2>
 						<p className="text-neutral-400 text-md">
-							нажмите на одну из кнопок, чтобы раскрыть список скриншотов
+							{configT("expand_accordion")}
 						</p>
 					</div>
-					<Accordion type="single" collapsible className="flex flex-col gap-y-2">
+					<Accordion id="portfolio" type="single" collapsible className="flex flex-col gap-y-2">
 						<AccordionItem value="desktop">
 							<AccordionTrigger className="bg-neutral-800 rounded-md p-2 w-full">
 								<p className="text-white text-lg font-semibold">

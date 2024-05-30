@@ -1,6 +1,6 @@
-import { SectionWrapper } from "@/components/wrappers/section-wrapper";
+import { SectionWrapper } from "@/components/wrappers/components/section-wrapper";
 import { getTranslations } from "next-intl/server";
-import { Portfolio } from "@/components/sections/portfolio/portfolio";
+import { Portfolio } from "@/components/sections/components/portfolio";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

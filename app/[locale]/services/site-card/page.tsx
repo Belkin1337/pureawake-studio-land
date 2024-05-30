@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/ui/button";
-import { SectionWrapper } from "@/components/wrappers/section-wrapper";
-import { TargetPageWrapper } from "@/components/wrappers/target-page-wrapper";
+import { SectionWrapper } from "@/components/wrappers/components/section-wrapper";
+import { TargetPageWrapper } from "@/components/wrappers/components/target-page-wrapper";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -28,13 +28,23 @@ export default async function ServicesSiteCardPage() {
 			/>
 			<div id="site-card-information" className="flex flex-col">
 				<SectionWrapper id="site-card-pluses" title={siteCardWikiT('Pluses.title')}>
-					<div className="flex flex-col gap-2 *:text-md lg:*:text-lg *:text-white">
-						<p>- {siteCardWikiT('Pluses.static_content')}</p>
-						<p>- {siteCardWikiT('Pluses.economy_website')}</p>
-						<p>- {siteCardWikiT('Pluses.stable_geo')}</p>
-						<p>- {siteCardWikiT('Pluses.growth_user_rep')}</p>
-						<p>- {siteCardWikiT('Pluses.inject_site_card_address')}</p>
-					</div>
+					<ul className="flex flex-col gap-2 *:text-md lg:*:text-lg *:text-white">
+						<li>
+							<p>- {siteCardWikiT('Pluses.static_content')}</p>
+						</li>
+						<li>
+							<p>- {siteCardWikiT('Pluses.economy_website')}</p>
+						</li>
+						<li>
+							<p>- {siteCardWikiT('Pluses.stable_geo')}</p>
+						</li>
+						<li>
+							<p>- {siteCardWikiT('Pluses.growth_user_rep')}</p>
+						</li>
+						<li>
+							<p>- {siteCardWikiT('Pluses.inject_site_card_address')}</p>
+						</li>
+					</ul>
 				</SectionWrapper>
 				<SectionWrapper id="site-card-how-to-work" title={siteCardWikiT('How-to-Work.title')}>
 					<div className="flex flex-row gap-4 *:text-md lg:*:text-lg *:text-white">

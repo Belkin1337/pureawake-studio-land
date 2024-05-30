@@ -171,7 +171,8 @@
     "mobile_version": "Mobile Version",
     "desktop_version": "Desktop Version",
     "to_contacts": "Contact Us",
-    "fulltime": "24/7"
+    "fulltime": "24/7",
+    "expand_accordion": "click on one of the buttons to expand the list of screenshots"
   },
   "Metadata": {
     "Global": {

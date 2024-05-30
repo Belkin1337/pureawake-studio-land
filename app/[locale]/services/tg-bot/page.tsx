@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/ui/button";
-import { SectionWrapper } from "@/components/wrappers/section-wrapper";
-import { TargetPageWrapper } from "@/components/wrappers/target-page-wrapper";
+import { SectionWrapper } from "@/components/wrappers/components/section-wrapper";
+import { TargetPageWrapper } from "@/components/wrappers/components/target-page-wrapper";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -28,27 +28,51 @@ export default async function ServicesTgBotPage() {
 			/>
 			<div id="tg-bot-information" className="flex flex-col">
 				<SectionWrapper id="tg-bot-pluses" title={telegramBotWikiT("Pluses.title")}>
-					<div className="flex flex-col gap-2 *:text-lg *:text-white">
-						<p>- {telegramBotWikiT("Pluses.economy")}</p>
-						<p>- {telegramBotWikiT("Pluses.ecosystem")}</p>
-						<p>- {telegramBotWikiT("Pluses.advertise_users")}</p>
-						<p>- {telegramBotWikiT("Pluses.advertising_functions")}</p>
-						<p>- {telegramBotWikiT("Pluses.segmenting_personalisations")}</p>
-						<p>- {telegramBotWikiT("Pluses.effective_ref_system")}</p>
-						<p>- {telegramBotWikiT("Pluses.more_count_functions")}</p>
-					</div>
+					<ul className="flex flex-col gap-2 *:text-lg *:text-white">
+						<li>
+							<p>- {telegramBotWikiT("Pluses.economy")}</p>
+						</li>
+						<li>
+							<p>- {telegramBotWikiT("Pluses.ecosystem")}</p>
+						</li>
+						<li>
+							<p>- {telegramBotWikiT("Pluses.advertise_users")}</p>
+						</li>
+						<li>
+							<p>- {telegramBotWikiT("Pluses.advertising_functions")}</p>
+						</li>
+						<li>
+							<p>- {telegramBotWikiT("Pluses.segmenting_personalisations")}</p>
+						</li>
+						<li>
+							<p>- {telegramBotWikiT("Pluses.effective_ref_system")}</p>
+						</li>
+						<li>
+							<p>- {telegramBotWikiT("Pluses.more_count_functions")}</p>
+						</li>
+					</ul>
 				</SectionWrapper>
 				<SectionWrapper id="tg-bot-how-to-work" title={telegramBotWikiT("Pluses.title")}>
 					<div className="flex flex-row gap-4 *:text-md lg:*:text-lg *:text-white">
 						<div className="flex flex-col gap-y-6">
 							<p>{telegramBotWikiT("How-to-Work.basis_first")}</p>
-							<div className="flex flex-col gap-y-2">
-								<p>{telegramBotWikiT("How-to-Work.basis_second")}</p>
-								<p>- {telegramBotWikiT("How-to-Work.chat_bot")}</p>
-								<p>- {telegramBotWikiT("How-to-Work.info_bot")}</p>
-								<p>- {telegramBotWikiT("How-to-Work.game_bot")}</p>
-								<p>- {telegramBotWikiT("How-to-Work.assistant_bot")}</p>
-							</div>
+							<ul className="flex flex-col gap-y-2">
+								<li>
+									<p>{telegramBotWikiT("How-to-Work.basis_second")}</p>
+								</li>
+								<li>
+									<p>- {telegramBotWikiT("How-to-Work.chat_bot")}</p>
+								</li>
+								<li>
+									<p>- {telegramBotWikiT("How-to-Work.info_bot")}</p>
+								</li>
+								<li>
+									<p>- {telegramBotWikiT("How-to-Work.game_bot")}</p>
+								</li>
+								<li>
+									<p>- {telegramBotWikiT("How-to-Work.assistant_bot")}</p>
+								</li>
+							</ul>
 							<p>{telegramBotWikiT("How-to-Work.basis_third")}</p>
 						</div>
 					</div>

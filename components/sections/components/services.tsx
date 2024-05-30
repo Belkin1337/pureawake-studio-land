@@ -14,9 +14,9 @@ export const Services = () => {
 			{SERVICES_LIST.map((item,
 				idx) => (
 				<NeonGradientCard key={idx}>
-					<h3 className="text-white text-lg font-semibold">
+					<p className="text-white text-lg font-semibold">
 						{t(item.name + '.title')}
-					</h3>
+					</p>
 					<HoverCard>
 						<HoverCardTrigger className="absolute top-2 right-2">
 							<CircleHelp size={22} className="text-neutral-400 cursor-pointer"/>

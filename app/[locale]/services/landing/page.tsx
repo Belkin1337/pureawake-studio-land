@@ -1,9 +1,9 @@
 import { Button } from "@/ui/button";
-import { SectionWrapper } from "@/components/wrappers/section-wrapper";
+import { SectionWrapper } from "@/components/wrappers/components/section-wrapper";
 import { ImageWithAnnotation } from "@/ui/image-with-annotation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { TargetPageWrapper } from "@/components/wrappers/target-page-wrapper";
+import { TargetPageWrapper } from "@/components/wrappers/components/target-page-wrapper";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -30,13 +30,23 @@ export default async function ServicesLandingPage() {
 			/>
 			<div id="landing-information" className="flex flex-col">
 				<SectionWrapper id="landing-pluses" title={landingWikiT("Pluses.title")}>
-					<div className="flex flex-col gap-2 *:text-md lg:*:text-lg *:text-white">
-						<p>- {landingWikiT('Pluses.leadgen')}</p>
-						<p>- {landingWikiT('Pluses.client_info')}</p>
-						<p>- {landingWikiT('Pluses.seo_enhance')}</p>
-						<p>- {landingWikiT('Pluses.advertise_enhance')}</p>
-						<p>- {landingWikiT('Pluses.simplify_process')}</p>
-					</div>
+					<ul className="flex flex-col gap-2 *:text-md lg:*:text-lg *:text-white">
+						<li>
+							<p>- {landingWikiT('Pluses.leadgen')}</p>
+						</li>
+						<li>
+							<p>- {landingWikiT('Pluses.client_info')}</p>
+						</li>
+						<li>
+							<p>- {landingWikiT('Pluses.seo_enhance')}</p>
+						</li>
+						<li>
+							<p>- {landingWikiT('Pluses.advertise_enhance')}</p>
+						</li>
+						<li>
+							<p>- {landingWikiT('Pluses.simplify_process')}</p>
+						</li>
+					</ul>
 				</SectionWrapper>
 				<SectionWrapper id="landing-how-to-work" title={landingWikiT("How-to-Work.title")}>
 					<div className="flex flex-col lg:flex-row gap-4 *:text-md lg:*:text-lg *:text-white">

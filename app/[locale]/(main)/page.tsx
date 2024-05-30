@@ -1,6 +1,6 @@
-import { Services } from "@/components/sections/services/services";
-import { Pricing } from "@/components/sections/pricing/pricing";
-import { SectionWrapper } from "@/components/wrappers/section-wrapper";
+import { Services } from "@/components/sections/components/services";
+import { Pricing } from "@/components/sections/components/pricing";
+import { SectionWrapper } from "@/components/wrappers/components/section-wrapper";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { TELEGRAM_CONTACT_PERSON_HREF, TELEGRAM_CONTACT_PERSON_ID } from "@/shared/contacts";

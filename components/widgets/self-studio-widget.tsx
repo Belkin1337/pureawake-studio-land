@@ -1,5 +1,6 @@
 import { GLOBAL_SITE_HREF } from "@/shared/contacts";
 import ShineBorder from "@/ui/shine-border";
+import Image from "next/image";
 
 export const SelfStudioWidget = () => {
 	return (
@@ -14,10 +15,13 @@ export const SelfStudioWidget = () => {
 				borderRadius={16}
 			>
 				<div className="flex flex-row w-full gap-x-2 items-center">
-					<img
+					<Image
 						src="https://i.ibb.co/c8sVb5j/favicon-transparent.png"
 						alt="Developed by"
+						width="20"
+						height="20"
 						className="w-[20px] h-[20px]"
+						loading="lazy"
 					/>
 					<p className="text-md text-white font-medium">
 						Dev. by pureawake studio

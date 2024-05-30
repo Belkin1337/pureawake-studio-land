@@ -2,7 +2,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/ui/hover-card";
 import { HeaderSegmentsType } from "@/shared/header";
 import { Selected } from "@/ui/selected";
 import Link from "next/link";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 export const HeaderSegment = ({
 	component: {
@@ -17,6 +17,7 @@ export const HeaderSegment = ({
 	return (
 		<HoverCard openDelay={0} closeDelay={0}>
 			<HoverCardTrigger
+				id={title}
 				href={href}
 				onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
 					if (nested) e.preventDefault();

@@ -5,12 +5,13 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Header } from "@/components/header/header";
 import { Footer } from "@/components/footer/footer";
+import { Analytics } from "@vercel/analytics/react"
+import { Partytown } from '@builder.io/partytown/react';
 
 import "@/styles/globals.css";
 
 import QueryProvider from "@/lib/providers/query-provider";
 import Script from "next/script";
-import { createMainLog } from "@/lib/logs/main";
 
 type LocaleType = 'ru_RU' | 'en_EN';
 
@@ -113,7 +114,17 @@ export default async function RootLayout({
 
 	return (
 		<html lang={locale} suppressHydrationWarning={true}>
-		<Script id="yandex-analytics" type="text/javascript" dangerouslySetInnerHTML={{
+		<body>
+		<QueryProvider>
+			<NextIntlClientProvider messages={messages}>
+				<Header/>
+				{children}
+				<Footer/>
+				<ReactQueryDevtools/>
+			</NextIntlClientProvider>
+		</QueryProvider>
+		<Analytics/>
+		<script id="yandex-analytics" type="text/partytown" dangerouslySetInnerHTML={{
 			__html: `
 			(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
 				m[i].l=1*new Date();
@@ -127,15 +138,6 @@ export default async function RootLayout({
 				accurateTrackBounce:true
 			});`,
 		}}/>
-		<body>
-		<QueryProvider>
-			<NextIntlClientProvider messages={messages}>
-				<Header/>
-				{children}
-				<Footer/>
-				<ReactQueryDevtools/>
-			</NextIntlClientProvider>
-		</QueryProvider>
 		<noscript>
 			<div>
 				<img src="https://mc.yandex.ru/watch/97248624" alt="" style={{ 'position': 'absolute', 'left': '-9999px' }}/>
