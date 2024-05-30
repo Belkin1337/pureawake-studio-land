@@ -21,7 +21,7 @@ export default async function ServicesLandingPage() {
 	const landingWikiT = await getTranslations("Wiki.Services.Landing");
 
 	return (
-		<div className="flex flex-col w-full h-full min-h-screen pt-32 lg:pt-24">
+		<div className="flex flex-col w-full h-full min-h-screen pt-36 lg:pt-24">
 			<TargetPageWrapper
 				title={landingWikiT("Wrapper.title")}
 				description={landingWikiT("Wrapper.description")}

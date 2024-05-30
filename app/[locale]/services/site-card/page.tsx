@@ -19,7 +19,7 @@ export default async function ServicesSiteCardPage() {
 	const siteCardWikiT = await getTranslations("Wiki.Services.Site-Card");
 
 	return (
-		<div className="flex flex-col w-full h-full min-h-screen pt-32 lg:pt-24">
+		<div className="flex flex-col w-full h-full min-h-screen pt-36 lg:pt-24">
 			<TargetPageWrapper
 				title={siteCardWikiT('Wrapper.title')}
 				description={siteCardWikiT('Wrapper.description')}
