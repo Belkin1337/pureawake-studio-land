@@ -172,5 +172,22 @@
     "desktop_version": "Десктопная версия",
     "to_contacts": "Связаться с нами",
     "fulltime": "круглосуточно"
+  },
+  "Metadata": {
+    "Global": {
+      "description": "pureawake.studio - студия разработчиков, которая разрабатывает качественные, продающие веб-сайты и не только."
+    },
+    "Wiki-Landing": {
+      "title": "лендинг",
+      "description": "Что такое лендинг? pureawake.studio объяснит!"
+    },
+    "Wiki-SiteCard": {
+      "title": "сайт-визитка",
+      "description": "Что такое сайт-визитка? pureawake.studio объяснит!"
+    },
+    "Wiki-TelegramBot": {
+      "title": "телеграм-бот",
+      "description": "Что такое телеграм-бот? pureawake.studio объяснит!"
+    }
   }
 }

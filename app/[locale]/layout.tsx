@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Header } from "@/components/header/header";
 import { Footer } from "@/components/footer/footer";
@@ -20,20 +20,33 @@ type MetadataType = {
 export async function generateMetadata({
 	params: { locale }
 }: MetadataType): Promise<Metadata> {
+	const metadataT = await getTranslations("Metadata");
+
 	let gLocale: LocaleType;
 
 	gLocale = locale === 'ru' ? 'ru_RU' : locale === 'en' ? 'en_EN' : 'en_EN'
 
 	return {
+		metadataBase: new URL('https://pureawake-studio.su'),
+		alternates: {
+			canonical: '/',
+			languages: {
+				'en-US': '/en',
+				'ru-RU': '/ru',
+			},
+		},
 		title: {
 			template: '%s',
 			default: 'pureawake.studio',
 		},
-		description: "pureawake.studio - студия разработчиков, которая разрабатывает качественные, продающие веб-сайты и не только.",
+		description: metadataT("Global.description"),
 		keywords: [
-			'pureawake', 'pureawake.studio', 'лендинг для сайта', 'лендинг', 'сайт-визитка',
-			'телеграм бот', 'заказать сайт', 'заказать лендинг', 'создать сайт', 'создать сайт-визитку',
-			'разработка сайта под ключ', 'разработка сайта', 'разработка телеграм ботов', 'разработка ботов'
+			'pureawake', 'pureawake.studio', 'лендинг для сайта', 'landing page for the site', 'лендинг', 'landing',
+			'сайт-визитка', 'web site card', 'site-card',
+			'телеграм бот', 'telegram bot', 'bot', 'bots', 'to order a site', 'order website development', 'заказать лендинг', 'to order a landing', 'order landing development',
+			'создать сайт', 'create a website', 'создать сайт-визитку', 'create a web site card',
+			'разработка сайта под ключ', 'turnkey website development', 'разработка сайта', 'website development',
+			'разработка телеграм ботов', 'telegram bot development', 'bots development', 'разработка ботов'
 		],
 		authors: [
 			{
@@ -49,7 +62,7 @@ export async function generateMetadata({
 		applicationName: 'pureawake.studio',
 		openGraph: {
 			title: 'pureawake.studio',
-			description: 'pureawake.studio - студия разработчиков, которая разрабатывает качественные, продающие веб-сайты и не только.',
+			description: metadataT("Global.description"),
 			url: 'https://pureawake-studio.su',
 			siteName: 'pureawake.studio main',
 			type: 'website',
@@ -71,7 +84,7 @@ export async function generateMetadata({
 		},
 		twitter: {
 			title: 'pureawake.studio',
-			description: 'pureawake.studio - студия разработчиков, которая разрабатывает качественные, продающие веб-сайты и не только.',
+			description: metadataT("Global.description"),
 			images: ['/app/favicon.ico'],
 		},
 		verification: {
@@ -98,7 +111,7 @@ export default async function RootLayout({
 	const messages = await getMessages();
 
 	return (
-		<html lang="en" suppressHydrationWarning={true}>
+		<html lang={locale} suppressHydrationWarning={true}>
 		<Script id="yandex-analytics" type="text/javascript" dangerouslySetInnerHTML={{
 			__html: `
 			(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

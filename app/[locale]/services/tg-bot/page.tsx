@@ -5,10 +5,14 @@ import { SectionWrapper } from "@/components/wrappers/section-wrapper";
 import { TargetPageWrapper } from "@/components/wrappers/target-page-wrapper";
 import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-	title: 'pureawake.studio / телеграм-бот',
-	description: "Что такое телеграм-бот? pureawake.studio объяснит!",
-};
+export async function generateMetadata(): Promise<Metadata> {
+	const metadataT = await getTranslations("Metadata.Wiki-TelegramBot");
+
+	return {
+		title: `pureawake.studio / ${metadataT('title')}`,
+		description: metadataT("description")
+	}
+}
 
 export default async function ServicesTgBotPage() {
 	const configT = await getTranslations("Config");

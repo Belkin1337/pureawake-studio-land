@@ -1,6 +1,5 @@
 import { GLOBAL_SITE_HREF } from "@/shared/contacts";
-import Image from "next/image";
-
+import ShineBorder from "@/ui/shine-border";
 
 export const SelfStudioWidget = () => {
 	return (
@@ -9,16 +8,22 @@ export const SelfStudioWidget = () => {
 			target='_blank'
 			rel="noreferrer"
 		>
-			<div className="flex items-center border border-neutral-700/10 gap-x-2 bg-neutral-800/20 rounded-xl px-2 py-1">
-				<img
-					src="https://i.ibb.co/c8sVb5j/favicon-transparent.png"
-					alt="Developed by"
-					className="w-[20px] h-[20px]"
-				/>
-				<p className="text-sm text-white">
-					Dev. by pureawake studio ♥
-				</p>
-			</div>
+			<ShineBorder
+				className="flex flex-row items-center bg-neutral-900 px-2 py-1"
+				color={["#71a3a5", "#FE8FB5", "#FFBE7B"]}
+				borderRadius={16}
+			>
+				<div className="flex flex-row w-full gap-x-2 items-center">
+					<img
+						src="https://i.ibb.co/c8sVb5j/favicon-transparent.png"
+						alt="Developed by"
+						className="w-[20px] h-[20px]"
+					/>
+					<p className="text-md text-white font-medium">
+						Dev. by pureawake studio
+					</p>
+				</div>
+			</ShineBorder>
 		</a>
 	)
 }

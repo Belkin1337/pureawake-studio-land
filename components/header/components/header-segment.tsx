@@ -2,7 +2,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/ui/hover-card";
 import { HeaderSegmentsType } from "@/shared/header";
 import { Selected } from "@/ui/selected";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export const HeaderSegment = ({
 	component: {
@@ -12,8 +12,10 @@ export const HeaderSegment = ({
 	},
 	nested
 }: HeaderSegmentsType) => {
+	const locale = useLocale();
 	const t = useTranslations("Header");
 
+	console.log(locale)
 	return (
 		<HoverCard openDelay={0} closeDelay={0}>
 			<HoverCardTrigger

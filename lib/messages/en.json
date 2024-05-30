@@ -172,5 +172,22 @@
     "desktop_version": "Desktop Version",
     "to_contacts": "Contact Us",
     "fulltime": "24/7"
+  },
+  "Metadata": {
+    "Global": {
+      "description": "pureawake.studio is a development studio that develops high-quality, selling websites and more."
+    },
+    "Wiki-Landing": {
+      "title": "landing",
+      "description": "What is a landing page? pureawake.studio will explain!"
+    },
+    "Wiki-SiteCard": {
+      "title": "website card",
+      "description": "What is a business card website? pureawake.studio will explain!"
+    },
+    "Wiki-TelegramBot": {
+      "title": "telegram-bot",
+      "description": "What is a telegram bot? pureawake.studio will explain!"
+    }
   }
 }

@@ -5,10 +5,14 @@ import { SectionWrapper } from "@/components/wrappers/section-wrapper";
 import { TargetPageWrapper } from "@/components/wrappers/target-page-wrapper";
 import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-	title: 'pureawake.studio / сайт-визитка',
-	description: "Что такое сайт-визитка? pureawake.studio объяснит!",
-};
+export async function generateMetadata(): Promise<Metadata> {
+	const metadataT = await getTranslations("Metadata.Wiki-SiteCard");
+
+	return {
+		title: `pureawake.studio / ${metadataT('title')}`,
+		description: metadataT("description")
+	}
+}
 
 export default async function ServicesSiteCardPage() {
 	const configT = await getTranslations("Config");

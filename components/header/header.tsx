@@ -20,8 +20,7 @@ export const Header = () => {
 			<div ref={ref} className="absolute top-0 right-0 left-0 py-6 w-full"/>
 			<div
 				className={`flex flex-col lg:flex-row justify-center lg:justify-between backdrop-blur-md z-[60] bg-neutral-900/10 
-			${headerHeight} items-center fixed duration-500 top-0 right-0 left-0 w-full wrapper rounded-b-xl *:w-full
-			`}
+			${headerHeight} items-center fixed duration-500 top-0 right-0 left-0 w-full wrapper rounded-b-xl *:w-full`}
 			>
 				<hr
 					className="absolute bottom-0 right-0 left-0 m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-200/30 to-neutral-200/0"/>
@@ -49,7 +48,7 @@ export const Header = () => {
 						/>
 					))}
 				</div>
-				<div className="flex items-center justify-center sm:justify-center gap-x-4 lg:justify-end">
+				<div className="flex flex-col sm:flex-row items-center justify-center sm:justify-center gap-x-4 lg:justify-end">
 					<div className="lg:hidden flex items-center gap-x-4">
 						{HEADER_SEGMENTS.map((item,
 							idx) => (

@@ -6,10 +6,15 @@ import type { Metadata } from "next";
 import { TargetPageWrapper } from "@/components/wrappers/target-page-wrapper";
 import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-	title: 'pureawake.studio / лендинг',
-	description: "Что такое лендинг? pureawake.studio объяснит!",
-};
+export async function generateMetadata(): Promise<Metadata> {
+	const metadataT = await getTranslations("Metadata.Wiki-Landing");
+
+	return {
+		title: `pureawake.studio / ${metadataT('title')}`,
+		description: metadataT("description")
+	}
+}
+
 
 export default async function ServicesLandingPage() {
 	const configT = await getTranslations("Config");
