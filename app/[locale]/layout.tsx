@@ -10,6 +10,7 @@ import "@/styles/globals.css";
 
 import QueryProvider from "@/lib/providers/query-provider";
 import Script from "next/script";
+import { createMainLog } from "@/lib/logs/main";
 
 type LocaleType = 'ru_RU' | 'en_EN';
 

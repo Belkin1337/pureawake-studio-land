@@ -12,10 +12,8 @@ export const HeaderSegment = ({
 	},
 	nested
 }: HeaderSegmentsType) => {
-	const locale = useLocale();
 	const t = useTranslations("Header");
 
-	console.log(locale)
 	return (
 		<HoverCard openDelay={0} closeDelay={0}>
 			<HoverCardTrigger
