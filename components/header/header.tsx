@@ -13,13 +13,13 @@ import LogoTransparent from "@/assets/images/favicon_transparent.png"
 
 export const Header = () => {
 	const { ref, inView } = useInView();
-	const headerHeight = inView ? 'py-6' : 'py-1';
+	const headerHeight = inView ? 'py-4' : 'py-1';
 
 	return (
 		<>
 			<div ref={ref} className="absolute top-0 right-0 left-0 py-6 w-full"/>
 			<div className={`flex flex-col lg:flex-row justify-center lg:justify-between backdrop-blur-md z-[60] bg-neutral-900/10 	${headerHeight}
-			 items-center fixed duration-500 top-0 right-0 left-0 w-full wrapper rounded-b-xl *:w-full`}
+			 items-center fixed duration-500 top-0 right-0 left-0 w-full wrapper *:w-full`}
 			>
 				<hr className="absolute bottom-0 right-0 left-0 m-0 h-px w-full border-none bg-gradient-to-r
 					from-neutral-200/0 via-neutral-200/30 to-neutral-200/0"

@@ -19,7 +19,7 @@ export default async function ServicesTgBotPage() {
 	const telegramBotWikiT = await getTranslations("Wiki.Services.Telegram-Bot");
 
 	return (
-		<div className="flex flex-col w-full h-full min-h-screen pt-36 lg:pt-24">
+		<div className="flex flex-col w-full h-full min-h-screen pt-40 lg:pt-24">
 			<TargetPageWrapper
 				title={telegramBotWikiT("Wrapper.title")}
 				description={telegramBotWikiT("Wrapper.description")}

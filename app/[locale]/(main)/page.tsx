@@ -31,7 +31,7 @@ export default async function Home() {
 			<div
 				className="flex relative flex-col justify-center lg:flex-row w-full h-full min-h-screen items-center gap-y-16 gap-x-32">
 				<div className="flex relative items-center flex-col gap-y-12 w-full lg:w-4/5 lg:pt-0 wrapper">
-					<div className="flex flex-col gap-y-6 w-full">
+					<div className="flex flex-col items-center gap-y-6 w-full">
 						<WordFadeIn
 							words={introT('title')}
 							className="font-bold text-4xl xl:text-6xl 2xl:text-7xl font-[GothamProBold] text-white"
