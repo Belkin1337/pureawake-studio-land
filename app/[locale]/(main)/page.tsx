@@ -44,9 +44,8 @@ export default async function Home() {
 					<div className="w-full sm:w-fit">
 						<Link href='/#contact'>
 							<Button variant="shimmer">
-								<Star size={18} className="fill-white"/>
 								<p className="text-white text-lg font-semibold">
-									{introT('button')}
+									🚀 {introT('button')}
 								</p>
 							</Button>
 						</Link>

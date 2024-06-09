@@ -38,8 +38,8 @@ export async function generateMetadata({
 			},
 		},
 		title: {
-			template: '%s',
-			default: 'pureawake.studio',
+			template: '%s | pureawake.studio',
+			default: `${metadataT("Global.title")} | pureawake.studio`,
 		},
 		description: metadataT("Global.description"),
 		keywords: [

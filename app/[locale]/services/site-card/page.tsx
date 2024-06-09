@@ -9,7 +9,7 @@ export async function generateMetadata(): Promise<Metadata> {
 	const metadataT = await getTranslations("Metadata.Wiki-SiteCard");
 
 	return {
-		title: `pureawake.studio / ${metadataT('title')}`,
+		title: `${metadataT('title')}`,
 		description: metadataT("description")
 	}
 }

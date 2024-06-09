@@ -2,7 +2,7 @@
   "Intro": {
     "title": "The best developments are only with us",
     "description": "We specialize in developing websites of various levels: from simple landing pages to markets.",
-    "button": "Make nice"
+    "button": "Сreate a website"
   },
   "Portfolio": {
     "title": "Examples of Our Works",
@@ -176,18 +176,19 @@
   },
   "Metadata": {
     "Global": {
+      "title": "Development of selling websites and more",
       "description": "pureawake.studio is a development studio that develops high-quality, selling websites and more."
     },
     "Wiki-Landing": {
-      "title": "landing",
+      "title": "What is a landing page?",
       "description": "What is a landing page? pureawake.studio will explain!"
     },
     "Wiki-SiteCard": {
-      "title": "website card",
+      "title": "What is a website card?",
       "description": "What is a business card website? pureawake.studio will explain!"
     },
     "Wiki-TelegramBot": {
-      "title": "telegram-bot",
+      "title": "What is a telegram-bot?",
       "description": "What is a telegram bot? pureawake.studio will explain!"
     }
   }
