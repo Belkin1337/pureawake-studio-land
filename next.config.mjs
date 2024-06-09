@@ -13,8 +13,7 @@ const nextConfig = {
 				pathname: '/**',
 			},
 		],
-	},
-	distDir: "build"
+	}
 };
 
 export default withNextIntl(nextConfig);
