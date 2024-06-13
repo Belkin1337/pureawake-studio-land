@@ -24,7 +24,7 @@ export const Footer = () => {
 				<SelfStudioWidget/>
 				<div className="flex flex-col gap-y-2">
 					<p className="text-your-pink-200 text-md lg:text-xl xl:text-2xl font-bold">
-						contact@pureawake-studio.su
+						piterschimpson@gmail.com
 					</p>
 					<Link href="https://t.me/pureawake" target="_blank">
 						<div className="flex gap-x-1 items-center justify-end">
