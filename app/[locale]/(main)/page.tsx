@@ -80,7 +80,7 @@ export default async function Home() {
 										{contactsT("contacts_email")}
 									</p>
 									<p className="text-white text-lg">
-										contact@pureawake-studio.su
+										piterschimpson@gmail.com
 									</p>
 								</div>
 								<div className="flex flex-col gap-y-1">
